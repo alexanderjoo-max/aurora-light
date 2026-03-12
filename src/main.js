@@ -79,7 +79,18 @@ document.querySelectorAll(".benefit-card").forEach((card) => {
   card.addEventListener("click", () => {
     const key = card.dataset.benefit;
     const data = benefitData[key];
-    benefitDetailContent.innerHTML = `<h4 class="text-xl font-bold text-aurora-slate mb-3">${data.title}</h4><p class="text-aurora-gray leading-relaxed">${data.text}</p>`;
+
+    // Remove active state from all cards
+    document.querySelectorAll(".benefit-card").forEach((c) => {
+      c.classList.remove("border-aurora-green/40", "bg-aurora-green/[0.06]", "ring-1", "ring-aurora-green/20");
+      c.classList.add("border-aurora-border");
+    });
+
+    // Add active state to clicked card
+    card.classList.add("border-aurora-green/40", "bg-aurora-green/[0.06]", "ring-1", "ring-aurora-green/20");
+    card.classList.remove("border-aurora-border");
+
+    benefitDetailContent.innerHTML = `<h4 class="text-lg font-semibold text-aurora-slate mb-2">${data.title}</h4><p class="text-aurora-gray text-[14px] leading-[1.7]">${data.text}</p>`;
     benefitDetail.classList.remove("hidden");
     benefitDetail.scrollIntoView({ behavior: "smooth", block: "nearest" });
   });
@@ -87,21 +98,11 @@ document.querySelectorAll(".benefit-card").forEach((card) => {
 
 document.getElementById("benefit-close").addEventListener("click", () => {
   benefitDetail.classList.add("hidden");
-});
-
-// ── Market Trends Toggle ─────────────────────────
-const marketTrendsBtn = document.getElementById("market-trends-btn");
-const marketTrendsPanel = document.getElementById("market-trends-panel");
-const trendsChevron = document.getElementById("trends-chevron");
-
-marketTrendsBtn.addEventListener("click", () => {
-  marketTrendsPanel.classList.toggle("hidden");
-  trendsChevron.classList.toggle("rotate-180");
-  if (!marketTrendsPanel.classList.contains("hidden")) {
-    marketTrendsBtn.classList.add("rounded-b-none");
-  } else {
-    marketTrendsBtn.classList.remove("rounded-b-none");
-  }
+  // Remove active state from all cards
+  document.querySelectorAll(".benefit-card").forEach((c) => {
+    c.classList.remove("border-aurora-green/40", "bg-aurora-green/[0.06]", "ring-1", "ring-aurora-green/20");
+    c.classList.add("border-aurora-border");
+  });
 });
 
 // ── Leader Bio Toggle ────────────────────────────
