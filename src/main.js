@@ -114,6 +114,39 @@ document.querySelectorAll(".industry-tab").forEach((tab) => {
   });
 });
 
+// ── Active nav highlight on scroll ──────────────
+const navSections = ["about", "services", "captive-101", "leadership", "industries", "contact"];
+const navLinks = document.querySelectorAll(".nav-link");
+
+const navObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        navLinks.forEach((link) => {
+          if (link.getAttribute("href") === "#contact") return; // skip contact button
+          const isMatch = link.getAttribute("href") === `#${id}`;
+          link.classList.toggle("text-aurora-slate", isMatch);
+          link.classList.toggle("font-semibold", isMatch);
+          link.classList.toggle("nav-active", isMatch);
+          if (!isMatch) {
+            link.classList.add("text-aurora-gray");
+            link.classList.remove("font-semibold");
+          } else {
+            link.classList.remove("text-aurora-gray");
+          }
+        });
+      }
+    });
+  },
+  { threshold: 0.15, rootMargin: "-80px 0px -50% 0px" }
+);
+
+navSections.forEach((id) => {
+  const section = document.getElementById(id);
+  if (section) navObserver.observe(section);
+});
+
 // ── Navbar scroll effect ─────────────────────────
 const navbar = document.getElementById("navbar");
 let lastScroll = 0;
