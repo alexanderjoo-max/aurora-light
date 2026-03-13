@@ -1,27 +1,5 @@
 import "./style.css";
 
-// ── Mobile Menu ──────────────────────────────────
-const mobileMenuBtn = document.getElementById("mobile-menu-btn");
-const mobileMenu = document.getElementById("mobile-menu");
-const menuIconOpen = document.getElementById("menu-icon-open");
-const menuIconClose = document.getElementById("menu-icon-close");
-
-mobileMenuBtn.addEventListener("click", () => {
-  const isOpen = !mobileMenu.classList.contains("hidden");
-  mobileMenu.classList.toggle("hidden");
-  menuIconOpen.classList.toggle("hidden");
-  menuIconClose.classList.toggle("hidden");
-});
-
-// Close mobile menu on link click
-document.querySelectorAll(".mobile-link").forEach((link) => {
-  link.addEventListener("click", () => {
-    mobileMenu.classList.add("hidden");
-    menuIconOpen.classList.remove("hidden");
-    menuIconClose.classList.add("hidden");
-  });
-});
-
 // ── Accordion (Services) ─────────────────────────
 document.querySelectorAll(".accordion-btn").forEach((btn) => {
   btn.addEventListener("click", () => {

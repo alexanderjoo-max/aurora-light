@@ -15,9 +15,9 @@
   <!-- NAV -->
   <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/80 backdrop-blur-xl border-b border-aurora-border">
     <div class="max-w-6xl mx-auto px-5 lg:px-8">
-      <div class="flex items-center justify-between h-16">
+      <div class="flex items-center justify-between h-14 lg:h-16">
         <a href="#hero" class="flex items-center gap-2.5 shrink-0">
-          <img src="/assets/logos/ART Logo - Horizontal - Black.png" alt="Aurora Risk Technologies" class="h-8" />
+          <img src="/assets/logos/ART Logo - Horizontal - Black.png" alt="Aurora Risk Technologies" class="h-7 lg:h-8" />
         </a>
         <div class="hidden lg:flex items-center gap-0.5">
           <a href="#about" class="px-3.5 py-1.5 text-[13px] text-aurora-gray hover:text-aurora-slate transition-colors">About</a>
@@ -27,20 +27,17 @@
           <a href="#industries" class="px-3.5 py-1.5 text-[13px] text-aurora-gray hover:text-aurora-slate transition-colors">Industries</a>
           <a href="#contact" class="ml-3 px-4 py-1.5 text-[13px] font-medium rounded-md bg-aurora-slate text-white hover:bg-aurora-slate/90 transition-all">Contact</a>
         </div>
-        <button id="mobile-menu-btn" class="lg:hidden p-1.5 text-aurora-gray hover:text-aurora-slate transition-colors" aria-label="Toggle menu">
-          <svg id="menu-icon-open" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
-          <svg id="menu-icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
-        </button>
       </div>
     </div>
-    <div id="mobile-menu" class="lg:hidden hidden border-t border-aurora-border bg-white/95 backdrop-blur-xl">
-      <div class="px-5 py-3 space-y-0.5">
-        <a href="#about" class="mobile-link block px-3 py-2.5 text-[13px] text-aurora-gray hover:text-aurora-slate transition-colors">About</a>
-        <a href="#services" class="mobile-link block px-3 py-2.5 text-[13px] text-aurora-gray hover:text-aurora-slate transition-colors">Services</a>
-        <a href="#captive-101" class="mobile-link block px-3 py-2.5 text-[13px] text-aurora-gray hover:text-aurora-slate transition-colors">Captive 101</a>
-        <a href="#leadership" class="mobile-link block px-3 py-2.5 text-[13px] text-aurora-gray hover:text-aurora-slate transition-colors">Leadership</a>
-        <a href="#industries" class="mobile-link block px-3 py-2.5 text-[13px] text-aurora-gray hover:text-aurora-slate transition-colors">Industries</a>
-        <a href="#contact" class="block mt-2 text-center px-4 py-2.5 text-[13px] font-medium rounded-md bg-aurora-slate text-white">Contact</a>
+    <!-- Mobile scrollable nav -->
+    <div class="lg:hidden border-t border-aurora-border overflow-x-auto scrollbar-hide">
+      <div class="flex items-center gap-0 px-4 whitespace-nowrap">
+        <a href="#about" class="nav-link px-3 py-2.5 text-[12px] text-aurora-gray hover:text-aurora-slate transition-colors shrink-0">About</a>
+        <a href="#services" class="nav-link px-3 py-2.5 text-[12px] text-aurora-gray hover:text-aurora-slate transition-colors shrink-0">Services</a>
+        <a href="#captive-101" class="nav-link px-3 py-2.5 text-[12px] text-aurora-gray hover:text-aurora-slate transition-colors shrink-0">Captive 101</a>
+        <a href="#leadership" class="nav-link px-3 py-2.5 text-[12px] text-aurora-gray hover:text-aurora-slate transition-colors shrink-0">Leadership</a>
+        <a href="#industries" class="nav-link px-3 py-2.5 text-[12px] text-aurora-gray hover:text-aurora-slate transition-colors shrink-0">Industries</a>
+        <a href="#contact" class="nav-link px-3 py-2.5 text-[12px] font-medium text-aurora-green hover:text-aurora-green/80 transition-colors shrink-0">Contact</a>
       </div>
     </div>
   </nav>

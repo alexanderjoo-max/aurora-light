@@ -24,7 +24,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 4.5rem;
+    scroll-padding-top: 6.5rem;
   }
 
   body {
@@ -128,4 +128,13 @@
   font-weight: 500;
   letter-spacing: 0.12em;
   font-variant-numeric: tabular-nums;
+}
+
+/* Hide scrollbar for mobile nav */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
