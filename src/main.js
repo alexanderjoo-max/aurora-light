@@ -26,27 +26,27 @@ document.querySelectorAll(".accordion-btn").forEach((btn) => {
 const benefitData = {
   cost: {
     title: "Cost Savings",
-    text: "Captive insurance can provide significant cost savings compared to traditional commercial insurance by eliminating broker fees, reducing administrative expenses, and allowing businesses to retain underwriting profits. Many businesses see premium reductions of 20-40% compared to traditional markets.",
+    text: "Captive insurance can provide significant cost savings compared to traditional commercial insurance by eliminating broker fees, reducing administrative expenses, and allowing businesses to retain underwriting profits.",
   },
   coverage: {
     title: "Customized Coverage",
-    text: "Captive insurance allows businesses to tailor their coverage to their specific risk profile, ensuring they have the protection they need without paying for unnecessary coverage. This means you can insure risks that traditional carriers won't cover or price prohibitively.",
+    text: "Captive insurance allows businesses to tailor their coverage to their specific risk profile, ensuring they have the protection they need without paying for unnecessary coverage.",
   },
   risk: {
     title: "Enhanced Risk Management",
-    text: "Captive insurance gives businesses greater control over their risk management strategies, enabling them to implement risk mitigation measures and better manage their exposures. This proactive approach leads to fewer claims and lower long-term costs.",
+    text: "Captive insurance gives businesses greater control over their risk management strategies, enabling them to implement risk mitigation measures and better manage their exposures.",
   },
   profit: {
     title: "Increased Profitability",
-    text: "By reducing insurance costs and retaining underwriting profits, captive insurance can improve a business's overall profitability and financial performance. When claims are lower than premiums, your captive retains the profit rather than an external insurer.",
+    text: "By reducing insurance costs and retaining underwriting profits, captive insurance can improve a business's overall profitability and financial performance.",
   },
   cashflow: {
     title: "Improved Cash Flow",
-    text: "Captive insurance provides businesses with improved cash flow by allowing them to retain premiums that would otherwise be paid to traditional insurers. Investment income on reserves stays within your organization, enhancing overall financial flexibility.",
+    text: "Captive insurance can provide businesses with improved cash flow by allowing them to retain premiums that would otherwise be paid to traditional insurers.",
   },
   tax: {
     title: "Tax Advantages",
-    text: "Captive insurance can offer certain tax advantages, such as the ability to deduct premiums paid to the captive and the potential for tax-deferred growth of the captive's reserves. Properly structured captives may qualify for favorable tax treatment under IRC Section 831(b).",
+    text: "Captive insurance can offer certain tax advantages, such as the ability to deduct premiums paid to the captive and the potential for tax-deferred growth of the captive's reserves.",
   },
 };
 
